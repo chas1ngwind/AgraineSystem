@@ -184,6 +184,17 @@ class SpokenUserInputAdmin(admin.ModelAdmin):
 
 
 
+class DetailInfoAdmin(admin.ModelAdmin):
+     list_display = ['id', 'role', 'type', 'generation', 'amount','name','contactnumber']
+
+
+class RoleInfoAdmin(admin.ModelAdmin):
+    list_display = ['id', 'role']
+
+
+admin.site.register(RoleInfo, RoleInfoAdmin)
+
+admin.site.register(DetailInfo, DetailInfoAdmin)
 # Register your models here.
 
 admin.site.register(VoiceService, VoiceServiceAdmin)
