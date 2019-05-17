@@ -1,8 +1,8 @@
 from django.conf.urls import url, include
 
 from . import views
-from .views.rolelist import rolelist
-from .views.detaillist import detaillist
+# from .views.rolelist import rolelist
+# from .views.detaillist import detaillist
 
 app_name= 'service-development'
 urlpatterns = [
@@ -14,8 +14,8 @@ urlpatterns = [
     url(r'^user/register/(?P<session_id>[0-9]+)$', views.KasaDakaUserRegistration.as_view(), name = 'user-registration'),
     url(r'^language_select/(?P<session_id>[0-9]+)$', views.LanguageSelection.as_view(), name = 'language-selection'),
     url(r'^record/(?P<element_id>[0-9]+)/(?P<session_id>[0-9]+)$', views.record, name='record'),
-    url(r'^seed/$', rolelist, name='role'),
-    url(r'^seed/(?P<RoleInfo_id>\d+)/$', detaillist, name='detail'),
+    # url(r'^seed/$', rolelist, name='role'),
+    # url(r'^seed/(?P<RoleInfo_id>\d+)/$', detaillist, name='detail'),
 
 
 ]
