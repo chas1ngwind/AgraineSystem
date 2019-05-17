@@ -1,4 +1,5 @@
 from django.db import models
+
 class RoleInfo(models.Model):
     # set role
     role = models.CharField(max_length=10)
