@@ -5,5 +5,3 @@ from .vse_record import *
 from .user import *
 from .voiceservice import *
 from .language import *
-from .rolelist import *
-from .detaillist import *
