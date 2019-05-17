@@ -25,8 +25,8 @@ urlpatterns = [
 #(\d+)/
     url(r'^(\d+)/addinfo$', addinfo,name='add'),
     url(r'^(\d+)/postTest2/$', postTest2,name='postT2'),
-    url(r'^(\d+)/delinfo/$', delinfo),name='delete'),
-    url(r'^(\d+)/editinfo/$', editinfo,name='edit'),
+    url(r'^(\d+)/delinfo/$', delinfo,name='delete'),
+    url(r'^(\d+)/editinfo/$', editinfo, name="edit"),
 
 
 
