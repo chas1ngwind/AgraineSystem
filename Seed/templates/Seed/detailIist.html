@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DetailList</title>
+</head>
+<body>
+<title>Detail Information</title>
+<ul>
+<!--    {% for detailinfo in detail_list %}-->
+<!--&lt;!&ndash;    <li><a href ="{{detailinfo.id}}/">{{detailinfo.role}}</a></li>&ndash;&gt;-->
+<!--    <li><a href ="addinfo">Add</a></li>-->
+<!--    {% endfor %}-->
+<!--    detailinfo.type, detailinfo.amount, detailinfo.generation-->
+    <li><a href ="addinfo">Add</a></li>
+</ul>
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>amount</th>
+        <th>type</th>
+        <th>generation</th>
+        <th>Change</th>
+    </tr>
+    {% for detailinfo in detail_list %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{detailinfo.amount}}</td>
+        <td>{{detailinfo.type}}</td>
+        <td>{{detailinfo.generation}}</td>
+        <td>
+            <a href="delinfo?nid={{ row.id }}">Delete</a>
+            |
+            <a href="editinfo?nid={{ row.id }}">Edit</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

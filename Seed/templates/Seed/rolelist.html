@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RoleList</title>
+</head>
+<body>
+<!--<ul>-->
+<!--    {% for roleinfo in role_list %}-->
+<!--&lt;!&ndash;     <li><a href ="{{roleinfo.id}}/">{{roleinfo.role}}</a></li>&ndash;&gt;-->
+<!--    <li><a href ="{{roleinfo.id}}/">{{roleinfo.role}}</a></li>-->
+
+<!--    {% endfor %}-->
+
+<!--</ul>-->
+
+<table border="1">
+    <tr>
+        <th>id</th>
+        <th>role</th>
+    </tr>
+    {% for roleinfo in role_list %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td><a href ="{{roleinfo.id}}/">{{roleinfo.role}}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
