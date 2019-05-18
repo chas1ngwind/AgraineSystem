@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SeedList</title>
+</head>
+<body>
+<ul>
+    {% for seedinfo in seed_list %}
+    <li><a href ="{{seedinfo.id}}/">{{seedinfo.type}}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

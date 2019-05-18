@@ -4,7 +4,7 @@ from django.conf.urls import url
 
 from Seed.views import rolelist, detaillist, addinfo, delinfo, editinfo, postTest2
 # from Seed.views import rolelist, detaillist, register,reg2
-app_name= 'Seed'
+
 urlpatterns = [
     #
     # url(r'^info/$', info),
@@ -21,12 +21,13 @@ urlpatterns = [
 
 
     url(r'^$', rolelist),
-    url(r'^seedweb/(?P<RoleInfo_id>\d+)/$', detaillist, name='detail'),
+    url(r'^(?P<RoleInfo_id>\d+)/$', detaillist),
 #(\d+)/
-    url(r'^(\d+)/addinfo$', addinfo,name='add'),
-    url(r'^(\d+)/postTest2/$', postTest2,name='postT2'),
-    url(r'^(\d+)/delinfo/$', delinfo,name='delete'),
-    url(r'^(\d+)/editinfo/$', editinfo, name="edit"),
+    url(r'^(\d+)/addinfo/$', addinfo),
+    url(r'^(\d+)/addinfo/postTest2/$', postTest2),
+    url(r'^(\d+)/delinfo/$', delinfo),
+    url(r'^(\d+)/editinfo/$', editinfo),
+    url(r'^(\d+)/editinfo/editinfo/$', detaillist),
 
 
 

@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class SendsystemConfig(AppConfig):
+class SeedConfig(AppConfig):
     name = 'Seed'

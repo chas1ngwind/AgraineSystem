@@ -24,14 +24,14 @@
     </tr>
     {% for detailinfo in detail_list %}
     <tr>
-        <td>{{forloop.counter}}</td>
+        <td>{{detailinfo.id}}</td>
         <td>{{detailinfo.amount}}</td>
         <td>{{detailinfo.type}}</td>
         <td>{{detailinfo.generation}}</td>
         <td>
-            <a href="delinfo?nid={{ row.id }}">Delete</a>
+            <a href="delinfo?id={{ detailinfo.id}}">Delete</a>
             |
-            <a href="editinfo?nid={{ row.id }}">Edit</a>
+            <a href="editinfo?id={{ detailinfo.id }}">Edit</a>
         </td>
     </tr>
     {% endfor %}

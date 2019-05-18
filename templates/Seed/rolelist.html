@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RoleList</title>
+</head>
+<body>
+<ul>
+    {% for roleinfo in role_list %}
+    <li><a href ="{{roleinfo.id}}/">{{roleinfo.role}}</a></li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

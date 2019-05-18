@@ -176,31 +176,22 @@ def postTest2(request, RoleInfo_id):
 
 def delinfo(request, RoleInfo_id):
     role = RoleInfo.objects.get(id=RoleInfo_id)
-    #nid = request.GET.get('nid')
-    id = request.GET['id']
-    detail_list = role.detailinfo_set.all()
-    #models.DetailInfo.objects.filter(id=nid).delete()
-    role.detailinfo_set.filter(id=id).delete()
+    nid = request.GET.get('nid')
+    role.detailinfo_set.filter(id=nid).delete()
     return render(request, 'Seed/delinfo.html')
 
 
 def editinfo(request, RoleInfo_id):
     role = RoleInfo.objects.get(id=RoleInfo_id)
     if request.method == 'GET':
-        id = request.GET['id']
-        #amount = request.POST['amount']
-        #type = request.POST['type']
-        #generation = request.POST['generation']
-        detail_list = role.detailinfo_set.all()
-        detail_spec = role.detailinfo_set.filter(id=id)
-        return render(request, 'Seed/editinfo.html', {'detail_spec':detail_spec})
+        nid = request.GET.get('nid')
+        obj = role.detailinfo_set.filter(id=nid)
+        return render(request, 'Seed/editinfo.html', {'obj': obj})
     elif request.method == 'POST':
-        #nid = request.GET.get('nid')
-        id = request.GET['id']
+        nid = request.GET.get('nid')
         amount = request.POST['amount']
         type = request.POST['type']
         generation = request.POST['generation']
-        detail_list = role.detailinfo_set.all()
-        #obj = role.detailinfo_set.filter(id=nid)
-        role.detailinfo_set.filter(id=id).update(amount=amount, type=type, generation=generation)
-        return render(request, 'Seed/detaillist.html', {'detail_list':detail_list})
+        obj = role.detailinfo_set.filter(id=nid)
+        role.detailinfo_set.filter(id=nid).update(amount=amount, type=type, generation=generation)
+        return render(request, 'Seed/detaillist.html')
