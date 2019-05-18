@@ -21,7 +21,7 @@ urlpatterns = [
 
 
     url(r'^$', rolelist),
-    url(r'^(?P<RoleInfo_id>\d+)/$', detaillist, name='detail'),
+    url(r'^seedweb/(?P<RoleInfo_id>\d+)/$', detaillist, name='detail'),
 #(\d+)/
     url(r'^(\d+)/addinfo$', addinfo,name='add'),
     url(r'^(\d+)/postTest2/$', postTest2,name='postT2'),
