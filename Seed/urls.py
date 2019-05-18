@@ -20,14 +20,14 @@ urlpatterns = [
 
 
 
-    url(r'^$', rolelist),
-    url(r'^(?P<RoleInfo_id>\d+)/$', detaillist),
+    url(r'^seedweb/$', rolelist),
+    url(r'^seedweb/(?P<RoleInfo_id>\d+)/$', detaillist),
 #(\d+)/
-    url(r'^(\d+)/addinfo/$', addinfo),
-    url(r'^(\d+)/addinfo/postTest2/$', postTest2),
-    url(r'^(\d+)/delinfo/$', delinfo),
-    url(r'^(\d+)/editinfo/$', editinfo),
-    url(r'^(\d+)/editinfo/editinfo/$', detaillist),
+    url(r'^seedweb/(\d+)/addinfo/$', addinfo),
+    url(r'^seedweb/(\d+)/addinfo/postTest2/$', postTest2),
+    url(r'^seedweb/(\d+)/delinfo/$', delinfo),
+    url(r'^seedweb/(\d+)/editinfo/$', editinfo),
+    url(r'^seedweb/(\d+)/editinfo/editinfo/$', detaillist),
 
 
 
