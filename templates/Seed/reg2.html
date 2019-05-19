@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/reg2/" method="post">
+    {% csrf_token %}
+{#    {{ form_obj.as_p }}#}
+    <p>amount{{ form_obj.amount }} <span>{{ errors.obj.amount.0 }}</span> </p>
+    <p>type{{ form_obj.type }}<span>{{ errors.obj.type.0 }}</span></p>
+    <p>generation{{ form_obj.generation }}<span>{{ errors.obj.generation.0 }}</span></p>
+    <input type="submit">
+
+</form>
+</body>
+</html>
