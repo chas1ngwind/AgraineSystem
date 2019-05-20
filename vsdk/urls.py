@@ -19,7 +19,7 @@ from django.conf.urls.static import static
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 from django.urls import path, include
-from vsdk.agraine.Seed.views import rolelist, detaillist, addinfo, delinfo, editinfo, postTest2
+#from vsdk.agraine.Seed.views import rolelist, detaillist, addinfo, delinfo, editinfo, postTest2
 
 admin.site.site_header = _("KasaDaka Voice Services")
 
