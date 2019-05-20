@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Seed',
+    'vsdk.agraine',
 ]
 
 
@@ -153,7 +153,7 @@ MEDIA_URL = '/uploads/'
 try:
     SFTP_PASS =  os.environ['SFTP_PASS']
     SFTP_USER = os.environ['SFTP_USER']
-    HEROKU =os.environ['HEROKU'] 
+    HEROKU =os.environ['HEROKU']
     SFTP_HOST = os.environ['SFTP_HOST']
     SFTP_PORT = os.environ['SFTP_PORT']
 
@@ -239,4 +239,3 @@ LOGGING = {
         },
     }
 }
-
