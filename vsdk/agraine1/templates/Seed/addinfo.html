@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<ul>
+<!--    {% for detailinfo in detail_list %}-->
+<!--&lt;!&ndash;    <li><a href ="{{detailinfo.id}}/">{{detailinfo.role}}</a></li>&ndash;&gt;-->
+<!--    <li><a href ="addinfo">Add</a></li>-->
+<!--    {% endfor %}-->
+<!--    detailinfo.type, detailinfo.amount, detailinfo.generation-->
+    <li><a href ="addinfo">Add</a></li>
+</ul>
+<body>
+
+<form  method="POST" action="postTest2/">
+    amount: <input type="number" name="amount"><br>
+    type: <input type="radio" name="type" value="rice" checked="checked"> rice <input type ="radio" name="type" value="sorghum"> sorghum<input type="radio" name="type" value="cotton"> cotton<br>
+<!--    generation: <input type="text" name="generation">-->
+    generation: <input type="radio" name="generation" value="basic seed" checked="checked"> basic seed<input type="radio" name="generation" value="round1"> round1 <input type="radio" name="generation" value="round2"> round2<input type="radio" name="generation" value="hybird">hybird<br>
+
+        <input type="submit" value="submit" />
+</form>
+
+</body>
+</html>

@@ -26,7 +26,7 @@ admin.site.site_header = _("KasaDaka Voice Services")
 urlpatterns = [
     #seed
     #path('', include('Seed.urls')),
-    path('seed/', include('vsdk.agraine.Seed.urls')),
+    path('seed/', include('vsdk.agraine1.Seed.urls')),
 
     url(r'^', admin.site.urls),
     url(r'^vxml/', include('vsdk.service_development.urls')),
